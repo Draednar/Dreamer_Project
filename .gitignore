@@ -61,3 +61,7 @@ crashlytics-build.properties
 Jam/Library/ArtifactDB
 Jam/Library/Bee/fullprofile.json
 Jam/UserSettings/Layouts/default-2021.dwlt
+*.json
+*.asset
+*.dag
+*.outputdata
