@@ -19,10 +19,10 @@ public class NavMeshMngr : MonoBehaviour
 
     public static void Update()
     {
-        targetDistance = Vector3.Distance(target.position, stalker.position);
 
         if (isFollower)
         {
+            targetDistance = Vector3.Distance(target.position, stalker.position);
             if (dist > 0)//Check if the distance is given
             {
                 if (targetDistance <= dist)
