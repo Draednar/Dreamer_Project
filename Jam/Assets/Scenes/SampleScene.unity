@@ -6307,6 +6307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomMaxIntensity: 0.9
   maxFrameDuration: 20
+  color: {r: 0, g: 0, b: 0, a: 0}
   light: {fileID: 192167994}
   shader: {fileID: 2100000, guid: 06f273e1f5bc5a3408c9e902d6b503dc, type: 2}
 --- !u!1001 &192179922
