@@ -6,8 +6,9 @@ public class LightBlink : MonoBehaviour
 {
     [SerializeField] private float randomMaxIntensity;
     [SerializeField] private float maxFrameDuration;
-
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private Color color;
+ 
+    //[SerializeField] private AudioSource audioSource;
     [SerializeField] private Light light;
     [SerializeField] private Material shader;
 
@@ -25,7 +26,7 @@ public class LightBlink : MonoBehaviour
             intensity = Random.Range(0, randomMaxIntensity);
             time = Random.Range(0, maxFrameDuration);
             decreaseValue = intensity / time;
-            audioSource.Play(0);
+            //audioSource.Play(0);
         }
 
 
@@ -33,6 +34,6 @@ public class LightBlink : MonoBehaviour
 
 
         light.intensity = intensity;
-        shader.SetColor("_EmissionColor", Color.white * intensity);
+        shader.SetColor("_EmissionColor", color * intensity);
     }
 }
