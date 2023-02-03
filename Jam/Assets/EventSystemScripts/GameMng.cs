@@ -16,14 +16,14 @@ public class GameMng : MonoBehaviour
         toursBeforeNextEvent = Random.Range(2,5);
     }
 
-    public void StartWaiting()
+    public void StartWaiting(int seconds)
     {
-        Wait();
+        Wait(seconds);
     }
 
-    public IEnumerator Wait()
+    public IEnumerator Wait(int seconds)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(seconds);
     }
 
 

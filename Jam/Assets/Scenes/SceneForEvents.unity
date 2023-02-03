@@ -9738,6 +9738,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5089838222262056587, guid: 53f90452b00c98d4d818b4e3af5a04b2, type: 3}
   m_PrefabInstance: {fileID: 448622860}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &452136991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 452136992}
+  - component: {fileID: 452136994}
+  - component: {fileID: 452136993}
+  m_Layer: 0
+  m_Name: SisterRoomTurnOffLightTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &452136992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452136991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.01, y: 12.21, z: -5.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1305049992}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &452136993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452136991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be09606c0f7cc0141b15d66566c2a033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &452136994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452136991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &465656749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11850,6 +11908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534681670}
   - component: {fileID: 534681671}
+  - component: {fileID: 534681672}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -11934,6 +11993,24 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &534681672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534681669}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8931685a26a1f874993609f516ace0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomMaxIntensity: 1
+  maxFrameDuration: 150
+  color: {r: 0, g: 0, b: 0, a: 0}
+  light: {fileID: 534681671}
+  shader: {fileID: 2100000, guid: 6bb161cb895164c40bcc66de6e26d7d1, type: 2}
+  lightIntensityBackup: 0
 --- !u!1 &535767166
 GameObject:
   m_ObjectHideFlags: 0
@@ -12270,6 +12347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 546702410}
   - component: {fileID: 546702411}
+  - component: {fileID: 546702412}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -12354,6 +12432,24 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &546702412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546702409}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8931685a26a1f874993609f516ace0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomMaxIntensity: 1
+  maxFrameDuration: 150
+  color: {r: 0, g: 0, b: 0, a: 0}
+  light: {fileID: 546702411}
+  shader: {fileID: 2100000, guid: 6bb161cb895164c40bcc66de6e26d7d1, type: 2}
+  lightIntensityBackup: 0
 --- !u!1001 &546939356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15587,6 +15683,57 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+  SisterDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1524218736}
+        m_TargetAssemblyTypeName: BlinkingLightMng, Assembly-CSharp
+        m_MethodName: TurnOffAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1524218734}
+        m_TargetAssemblyTypeName: GameMng, Assembly-CSharp
+        m_MethodName: StartWaiting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1524218736}
+        m_TargetAssemblyTypeName: BlinkingLightMng, Assembly-CSharp
+        m_MethodName: BlinkStopAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1524218736}
+        m_TargetAssemblyTypeName: BlinkingLightMng, Assembly-CSharp
+        m_MethodName: TurnOnAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!4 &684278795
 Transform:
@@ -30162,6 +30309,7 @@ Transform:
   - {fileID: 704054629}
   - {fileID: 1779763166}
   - {fileID: 2113433316}
+  - {fileID: 452136992}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34675,13 +34823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b5e060bea3ed9e49a1628ef93697938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &1526412042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39884,6 +40025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1801656520}
   - component: {fileID: 1801656521}
+  - component: {fileID: 1801656522}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -39968,6 +40110,24 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1801656522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801656519}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8931685a26a1f874993609f516ace0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomMaxIntensity: 1
+  maxFrameDuration: 150
+  color: {r: 0, g: 0, b: 0, a: 0}
+  light: {fileID: 1801656521}
+  shader: {fileID: 2100000, guid: 6bb161cb895164c40bcc66de6e26d7d1, type: 2}
+  lightIntensityBackup: 0
 --- !u!1001 &1805006915
 PrefabInstance:
   m_ObjectHideFlags: 0
