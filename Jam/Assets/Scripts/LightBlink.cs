@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightBlink : MonoBehaviour
+public class LightBlinking : MonoBehaviour
 {
     [SerializeField] private float randomMaxIntensity;
     [SerializeField] private float maxFrameDuration;

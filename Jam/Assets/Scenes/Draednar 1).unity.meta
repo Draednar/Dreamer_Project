@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Jam/Assets/Scenes/Draednar 1).unity.meta
 guid: c376a8512cc5cc0438507af978547256
+========
+guid: 3d771d888e088cc478638671cef37643
+folderAsset: yes
+>>>>>>>> origin/Events:Jam/Assets/NavMeshScript.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

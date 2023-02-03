@@ -30,7 +30,9 @@ public class SwitchMap : MonoBehaviour
     {
         if (current == map_1)
         {
+            current.ActivateDoor();
             current = map_2;
+            current.DisableDoor();
             current.transform.position = positions[counter_loop % 4];
             current.transform.eulerAngles = rotations[counter_loop % 4];
             counter_loop++;
@@ -38,7 +40,9 @@ public class SwitchMap : MonoBehaviour
 
         else if (current == map_2)
         {
+            current.ActivateDoor();
             current = map_1;
+            current.DisableDoor();
             current.transform.position = positions[counter_loop % 4 ];
             current.transform.eulerAngles = rotations[counter_loop % 4];
             counter_loop++;

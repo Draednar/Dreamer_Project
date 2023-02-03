@@ -7,10 +7,13 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] GameObject main_camera, text;
     [SerializeField] AnimationCurve curve;
 
-    Transform trigger;
+    Transform trigger_1, trigger_2, interracted;
 
     public delegate void OnSwitchMap();
     public static event OnSwitchMap change;
+
+    public delegate void OnResetDoor();
+    public static event OnResetDoor reset;
 
     Player_Input input;
     Rigidbody rb;
@@ -40,10 +43,16 @@ public class Player_Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Switch" && trigger != other.transform || trigger == null)
+        if (other.tag == "Switch" && trigger_1 != other.transform || trigger_1 == null)
         {
-            trigger = other.transform;
+            trigger_1 = other.transform;
             change.Invoke();
+        }
+
+        else if (other.tag == "Reset" && trigger_2 != other.transform || trigger_2 == null)
+        {
+            trigger_2 = other.transform;
+            reset.Invoke();
         }
     }
 
@@ -90,8 +99,9 @@ public class Player_Movement : MonoBehaviour
 
             if (interact != null)
             {
-                if (input.button_interact)
+                if (input.button_interact && interracted != hit.transform || interracted == null)
                 {
+                    interracted = hit.transform;
                     interact.Interact();
                 }
                 text.SetActive(true);

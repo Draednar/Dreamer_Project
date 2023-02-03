@@ -4,9 +4,26 @@ using UnityEngine;
 
 public class Door_Interact : MonoBehaviour , IInteractable
 {
+    [SerializeField] Animator animator;
+
+    private void Start()
+    {
+        Player_Movement.reset += ResetDoor;
+    }
+
+    private void OnDestroy()
+    {
+        Player_Movement.reset -= ResetDoor;
+    }
+
     public void Interact()
     {
-        Debug.Log("door");
+        animator.SetBool("OpenDoor", true);
+    }
+
+    void ResetDoor()
+    {
+        animator.SetBool("OpenDoor", false);
     }
     
 }

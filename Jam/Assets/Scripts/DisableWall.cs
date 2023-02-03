@@ -8,6 +8,7 @@ public class DisableWall : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] List<GameObject> walls = new List<GameObject>();
+    [SerializeField] GameObject door;
 
     public bool disable = false;
     bool was = false;
@@ -41,5 +42,15 @@ public class DisableWall : MonoBehaviour
         {
             walls[i].SetActive(true);
         }
+    }
+
+    public void DisableDoor()
+    {
+        door.SetActive(false);
+    }
+
+    public void ActivateDoor()
+    {
+        door.SetActive(true);
     }
 }
