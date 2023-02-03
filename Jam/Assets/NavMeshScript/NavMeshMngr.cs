@@ -7,6 +7,7 @@ public class NavMeshMngr : MonoBehaviour
 {
 
     static private Transform target;
+    static private Vector3 destination;
 
     static private Transform stalker;
     static private NavMeshAgent navMeshAgentStalker;
@@ -16,6 +17,7 @@ public class NavMeshMngr : MonoBehaviour
 
     static private bool isFollower;
     static private bool followLastPosition;
+    static private bool moveToActive;
 
     public static void Update()
     {
@@ -43,6 +45,10 @@ public class NavMeshMngr : MonoBehaviour
                 navMeshAgentStalker.destination = target.position;
             }
         }
+        else if (moveToActive == true)
+        {
+            navMeshAgentStalker.destination = destination;
+        }
     }
 
 
@@ -57,6 +63,16 @@ public class NavMeshMngr : MonoBehaviour
         followLastPosition = FollowLastPosition;
 
         isFollower = true;
+    }
+    static public void Follow(GameObject Obj, Vector3 Target)
+    {
+        destination = Target;
+        stalker = Obj.transform;
+        navMeshAgentStalker = Obj.GetComponent<NavMeshAgent>();
+
+
+        isFollower = false;
+        moveToActive = true;
     }
     static public void NotFollow()
     {
