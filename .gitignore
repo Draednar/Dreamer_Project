@@ -61,3 +61,15 @@ crashlytics-build.properties
 Jam/Library/ArtifactDB
 Jam/Library/APIUpdater/project-dependencies.graph
 Jam/Library/Bee/1900b0aE-inputdata.json
+Jam/Library/ArtifactDB
+Jam/Library/Bee/1900b0aE.dag
+Jam/Library/Bee/1900b0aE.dag.json
+Jam/Library/Bee/backend_profiler0.traceevents
+Jam/Library/Bee/backend_profiler1.traceevents
+Jam/Library/Bee/buildprogram0.traceevents
+Jam/Library/Bee/fullprofile.json
+Jam/Library/Bee/tundra.digestcache
+Jam/Library/Bee/tundra.log.json
+Jam/Library/Bee/TundraBuildState.state
+Jam/Library/Bee/TundraBuildState.state.map
+Jam/Library/InspectorExpandedItems.asset
