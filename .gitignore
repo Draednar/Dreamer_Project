@@ -4,5 +4,4 @@
 !.gitignore
 !/Assets/
 !/ProjectSettings/
-Jam/Library/ArtifactDB
-Jam\Library\ArtifactDB
+Jam/Library/Artifacts
