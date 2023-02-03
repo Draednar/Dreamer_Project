@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
@@ -6,8 +7,14 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] GameObject main_camera, text;
     [SerializeField] AnimationCurve curve;
 
+    Transform trigger;
+
+    public delegate void OnSwitchMap();
+    public static event OnSwitchMap change;
+
     Player_Input input;
     Rigidbody rb;
+    bool active = false;
     Vector3 direction, rotation;
 
     float time_animation = 0;
@@ -29,6 +36,15 @@ public class Player_Movement : MonoBehaviour
     {
         UseMovement();
         CheckInteractable();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Switch" && trigger != other.transform || trigger == null)
+        {
+            trigger = other.transform;
+            change.Invoke();
+        }
     }
 
     void UseMovement()
