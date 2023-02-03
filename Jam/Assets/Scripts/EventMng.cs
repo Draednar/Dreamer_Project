@@ -14,9 +14,21 @@ public class EventMng : MonoBehaviour
         current = this;
     }
 
+    public UnityEvent endLoop;
+
     public UnityEvent<int> onDoorwayTriggerOpen;
 
     public UnityEvent<int> onDoorwayTriggerExit;
+
+    public UnityEvent<int> UnlockDoorsItemTaken;
+
+    public UnityEvent<int, bool> AbilitateDoorController;
+
+    public UnityEvent SpotMotherTriggerOnEvent;
+
+    public UnityEvent FatherChasingStart;
+
+    public UnityEvent SisterShoutingStart;
 
     public UnityEvent MotherInSisterRoomEvent;
 
@@ -25,5 +37,8 @@ public class EventMng : MonoBehaviour
     public UnityEvent WalkingUncle;
 
     public UnityEvent DancingLights;
+
+    public UnityEvent OfficeRoom;
+
 
 }

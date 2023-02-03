@@ -25,4 +25,9 @@ public class Door : MonoBehaviour
             myDoor.SetBool("OpenDoorState", false);
     }
 
+    public void ResetLoop()
+    {
+        OnDoorWayClose();
+    }
+
 }
