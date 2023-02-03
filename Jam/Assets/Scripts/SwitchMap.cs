@@ -11,7 +11,6 @@ public class SwitchMap : MonoBehaviour
     [SerializeField] Vector3[] positions = new Vector3[4];
     [SerializeField] Vector3[] rotations = new Vector3[4];
 
-
     int counter_loop = 0;
 
     private void Start()

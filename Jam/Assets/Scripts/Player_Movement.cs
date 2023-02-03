@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using UnityEngine;
 
@@ -61,6 +62,16 @@ public class Player_Movement : MonoBehaviour
         direction = transform.forward * input.movement_direction.y + transform.right * input.movement_direction.x;
 
         rb.velocity = (direction * move_speed) * Time.deltaTime;
+
+        PlayStep();
+    }
+
+    private void PlayStep()
+    {
+        if (Math.Abs(curve.Evaluate(time_animation)) == 1)
+        {
+            SoundMgr.PlaySound("Step");
+        }
     }
 
     void UseRotation()
