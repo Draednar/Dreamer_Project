@@ -24,7 +24,12 @@ public class EventMng : MonoBehaviour
 
     public UnityEvent<int, bool> AbilitateDoorController;
 
+    public UnityEvent MotherOpeningDoor;
+
     public UnityEvent SpotMotherTriggerOnEvent;
+
+    public UnityEvent<string, Transform> SpothMotherTriggerOnEventSpawn;
+
 
     public UnityEvent FatherChasingStart;
 
@@ -37,6 +42,8 @@ public class EventMng : MonoBehaviour
     public UnityEvent WalkingUncle;
 
     public UnityEvent DancingLights;
+
+    public UnityEvent UncleChasingStart;
 
     public UnityEvent OfficeRoom;
 
