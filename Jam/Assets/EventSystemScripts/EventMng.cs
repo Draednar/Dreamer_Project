@@ -52,4 +52,9 @@ public class EventMng : MonoBehaviour
     public UnityEvent DeSpawn_Uncle;
 
     public UnityEvent Spawn_Sister;
+
+
+    public UnityEvent Death;
+    public UnityEvent Respawn;
+    public UnityEvent RespawnSet;
 }

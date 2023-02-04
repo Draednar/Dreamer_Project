@@ -289,6 +289,19 @@ public class EnemyMngr : MonoBehaviour
         }
     }
 
+    public void DisableAll()
+    {
+        for (int i = 0; i < character.Length; i++)
+        {
+            
+                character[i].transform.Rotate(rotation, Space.World);
+                character[i].transform.position = disablePosition;
+                NotFollow(character[i].name);
+                character[i].SetActive(false);
+            
+        }
+    }
+
     #endregion
 
 
