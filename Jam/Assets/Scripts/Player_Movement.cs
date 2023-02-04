@@ -10,6 +10,8 @@ public class Player_Movement : MonoBehaviour
 
     Transform trigger_1, trigger_2, interracted;
 
+    Transform[] doors_interacted = new Transform[2];
+
     public delegate void OnSwitchMap();
     public static event OnSwitchMap change;
 
@@ -68,7 +70,7 @@ public class Player_Movement : MonoBehaviour
 
     private void PlayStep()
     {
-        if (Math.Abs(curve.Evaluate(time_animation)) == 1)
+        if (Math.Abs(curve.Evaluate(time_animation)) >= 0.99)
         {
             SoundMgr.PlaySound("Step");
         }
@@ -110,12 +112,21 @@ public class Player_Movement : MonoBehaviour
 
             if (interact != null)
             {
-                if (input.button_interact && interracted != hit.transform || interracted == null)
+                if (input.button_interact && interracted != hit.transform)
                 {
+                    Debug.Log(input.button_interact);
                     interracted = hit.transform;
                     interact.Interact();
                 }
+
+                if (interracted == hit.transform || interact.AnimationParameter())
+                {
+                    text.SetActive(false);
+                    return;
+                }
+
                 text.SetActive(true);
+
             }
         }
     }
