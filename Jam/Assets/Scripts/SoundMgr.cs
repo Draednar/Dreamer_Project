@@ -8,6 +8,7 @@ public class SoundMgr : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] List<string> key = new List<string>();
     [SerializeField] List<EventReference> value = new List<EventReference>();
+    [SerializeField] string GlobalVariable;
 
     static Dictionary<string, EventReference> sounds = new Dictionary<string, EventReference>();
 
@@ -23,4 +24,10 @@ public class SoundMgr : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(sounds[name]);
     }
+
+    public static void SetGlobalParameter(float value)
+    {
+        RuntimeManager.StudioSystem.setParameterByName("EndLoop", value);
+    }
+
 }

@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &-4309598030521322385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EndLoop
+  m_EditorClassIdentifier: 
+  Name: EndLoop
+  StudioPath: parameter:/EndLoop
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3339536281
+    data2: 1126472063
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-2960334862458139465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,11 +66,39 @@ MonoBehaviour:
   Path: ../../../../FMOD/JamFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638111224960000000
+  lastModified: 638111470940000000
   FileSizes:
   - Name: Desktop
-    Value: 175232
+    Value: 2143104
   Exists: 1
+--- !u!114 &-1616102977070462501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background/BackGround
+  m_EditorClassIdentifier: 
+  Path: event:/Background/BackGround
+  Guid:
+    Data1: -537958192
+    Data2: 1250255251
+    Data3: -1837571652
+    Data4: 483882036
+  Banks:
+  - {fileID: -2960334862458139465}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5258949903949140601}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 162000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,12 +118,14 @@ MonoBehaviour:
   - {fileID: 5765493521528111173}
   - {fileID: 7286097688744464014}
   - {fileID: -8019657785538775588}
-  EditorParameters: []
+  - {fileID: -1616102977070462501}
+  EditorParameters:
+  - {fileID: -4309598030521322385}
   MasterBanks:
   - {fileID: -2960334862458139465}
   StringsBanks:
   - {fileID: 1414840524098778200}
-  cacheTime: 638111224960000000
+  cacheTime: 638111470940000000
   cacheVersion: 131601
 --- !u!114 &1414840524098778200
 MonoBehaviour:
@@ -88,10 +142,34 @@ MonoBehaviour:
   Path: ../../../../FMOD/JamFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638111224960000000
+  lastModified: 638111470940000000
   FileSizes:
   - Name: Desktop
-    Value: 916
+    Value: 1030
+  Exists: 1
+--- !u!114 &5258949903949140601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BackGround/EndLoop
+  m_EditorClassIdentifier: 
+  Name: EndLoop
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3339536281
+    data2: 1126472063
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &5765493521528111173
 MonoBehaviour:
