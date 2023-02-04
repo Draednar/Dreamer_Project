@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class Lore_Interact : MonoBehaviour , IInteractable
 {
+    [SerializeField] GameObject lore;
+
+    bool do_once = false;
+
     public bool AnimationParameter()
     {
-        throw new System.NotImplementedException();
+        return false;
     }
 
     public void Interact()
     {
-        Debug.Log("lore");
+        if (do_once)
+        {
+            return;
+        }
+
+        lore.SetActive(true);
+
+        do_once = true;
     }
 }
