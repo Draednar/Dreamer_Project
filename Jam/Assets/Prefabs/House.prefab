@@ -3807,6 +3807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6720631529498203026}
+  - component: {fileID: 1167645634}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -3953,6 +3954,35 @@ Transform:
   m_Father: {fileID: 6720631530161709743}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167645634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720631529498203025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &6720631529500769283
 GameObject:
   m_ObjectHideFlags: 0
@@ -5135,6 +5165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6720631530161709743}
   - component: {fileID: 8643561720889072773}
+  - component: {fileID: 2359892567249568098}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -5201,6 +5232,21 @@ MonoBehaviour:
   - {fileID: 1201641471363831686}
   door: {fileID: 5874122270748069227}
   disable: 1
+--- !u!114 &2359892567249568098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720631530161709742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62cbf6c0f7b3904b9d102df9b3c30b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: 1167645634}
+  parent: {fileID: 6720631529498203026}
 --- !u!1 &6720631530172691158
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,11 +6352,49 @@ PrefabInstance:
       value: Floor_3x_3x (62)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156269624353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528323838788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &304320680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156269624353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220841318043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -6572,11 +6656,49 @@ PrefabInstance:
       value: Floor_3x_3x (68)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156278372147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528332589142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1591244010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156278372147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220833291657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -6747,11 +6869,49 @@ PrefabInstance:
       value: Floor_3x_3x (23)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156281073314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528335548871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &785391952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156281073314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220829738008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -6857,11 +7017,49 @@ PrefabInstance:
       value: Floor_3x_3x (29)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156275674836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528338260401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &744611981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156275674836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220826436718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -7448,11 +7646,49 @@ PrefabInstance:
       value: Floor_3x_3x (76)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156285548065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528348416324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1956014846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156285548065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220850953371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -8974,11 +9210,49 @@ PrefabInstance:
       value: Floor_3x_3x (24)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156228637310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528417320219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1595809519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156228637310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220781459652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -9458,11 +9732,49 @@ PrefabInstance:
       value: Floor_3x_3x (49)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156236782470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528425460963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1977486703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156236782470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220739301692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -9568,11 +9880,49 @@ PrefabInstance:
       value: Floor_3x_3x (63)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156236794627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528425473126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2108090078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156236794627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220739289529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -10130,11 +10480,49 @@ PrefabInstance:
       value: Floor_3x_3x (46)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156130854621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528462141880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &212460117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156130854621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220970994791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -10396,11 +10784,49 @@ PrefabInstance:
       value: Floor_3x_3x (85)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156142951180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528474236009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2084934346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156142951180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220960010678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -10584,11 +11010,49 @@ PrefabInstance:
       value: Floor_3x_3x (37)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156151319476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528482604241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1113593602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156151319476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220985196814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -10780,11 +11244,49 @@ PrefabInstance:
       value: Floor_3x_3x (71)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156158819572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528489857937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &518347849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156158819572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220978009678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -11038,11 +11540,49 @@ PrefabInstance:
       value: Floor_3x_3x (107)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156177259313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528500155476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &869120670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156177259313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220933501323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -11382,11 +11922,49 @@ PrefabInstance:
       value: Floor_3x_3x (30)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156186760391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528509660066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &233797399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156186760391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220957687421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -11946,11 +12524,49 @@ PrefabInstance:
       value: Floor_3x_3x (50)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156085765440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528542882341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1057322191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156085765440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220923809786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -12540,11 +13156,49 @@ PrefabInstance:
       value: Floor_3x_3x (53)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156103696228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528560545793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1234296573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156103696228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220872521182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -12650,11 +13304,49 @@ PrefabInstance:
       value: Floor_3x_3x (45)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156103613658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528560726975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &222960380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156103613658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220872472160 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -13204,11 +13896,49 @@ PrefabInstance:
       value: Floor_3x_3x (98)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156108741388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528573981801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1088614005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156108741388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220858692022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -13458,11 +14188,49 @@ PrefabInstance:
       value: Floor_3x_3x (42)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156125624894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528591144283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1469372783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156125624894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220875608196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -13568,11 +14336,49 @@ PrefabInstance:
       value: Floor_3x_3x (97)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156002499433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528593585164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1214136379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156002499433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221108965843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -14102,11 +14908,49 @@ PrefabInstance:
       value: Floor_3x_3x (70)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156006588689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528606330484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2053058003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156006588689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221096291243 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -14631,11 +15475,49 @@ PrefabInstance:
       value: Floor_3x_3x (26)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156035757863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528627107906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1153438163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156035757863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221075119517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -15345,11 +16227,49 @@ PrefabInstance:
       value: Floor_3x_3x (92)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156050804857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528650268444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1368606468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156050804857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221085973187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -15975,11 +16895,49 @@ PrefabInstance:
       value: Floor_3x_3x (100)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155960138792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528685425485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &807501504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155960138792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221049829010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -16631,11 +17589,49 @@ PrefabInstance:
       value: Floor_3x_3x (66)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155981168315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528715121118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1756425043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155981168315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221020525569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -16811,11 +17807,49 @@ PrefabInstance:
       value: Floor_3x_3x (109)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155982133442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528715827111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &349463656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155982133442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221019427448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -17927,11 +18961,49 @@ PrefabInstance:
       value: Floor_3x_3x (47)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155900573298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528760097047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &330985406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155900573298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221210500296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -18765,11 +19837,49 @@ PrefabInstance:
       value: Floor_3x_3x (56)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155913505698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528781661383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &423131434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155913505698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221221306648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -19458,11 +20568,49 @@ PrefabInstance:
       value: Floor_3x_3x (21)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155804302803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528806429366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &346092691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155804302803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221164558185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -19938,11 +21086,49 @@ PrefabInstance:
       value: Floor_3x_3x (39)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155812783807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528814914010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &122488807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155812783807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221189827589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -20048,11 +21234,49 @@ PrefabInstance:
       value: Floor_3x_3x (87)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155814121972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528816238225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &373510076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155814121972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221186931534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -20795,11 +22019,49 @@ PrefabInstance:
       value: Floor_3x_3x (82)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155842909611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528836635342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &681964541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155842909611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221133963025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -21686,11 +22948,49 @@ PrefabInstance:
       value: Floor_3x_3x (78)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155855630970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528858025247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1822478044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155855630970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221146650816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -22108,11 +23408,49 @@ PrefabInstance:
       value: Floor_3x_3x (84)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155751211206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528879435683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180067080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155751211206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220318755452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -22357,11 +23695,49 @@ PrefabInstance:
       value: Floor_3x_3x (32)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155759546705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528887492148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1021905105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155759546705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220310305771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -24458,11 +25834,49 @@ PrefabInstance:
       value: Floor_3x_3x (116)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155690819611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528952999806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &328891982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155690819611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220245781153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -24720,11 +26134,49 @@ PrefabInstance:
       value: Floor_3x_3x (111)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155687413509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528957978720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &433121125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155687413509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220240276927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -25660,11 +27112,49 @@ PrefabInstance:
       value: Floor_3x_3x (86)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155723906551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528986079890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1902882715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155723906551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220211713869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -25770,11 +27260,49 @@ PrefabInstance:
       value: Floor_3x_3x (91)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155723761383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631528986184066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1802400790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155723761383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220211612765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -26324,11 +27852,49 @@ PrefabInstance:
       value: Floor_3x_3x (35)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155604515483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529009559038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &646527690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155604515483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220423704609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -26434,11 +28000,49 @@ PrefabInstance:
       value: Floor_3x_3x (13)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155605523262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529010549851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &209722026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155605523262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220422582660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -26839,11 +28443,49 @@ PrefabInstance:
       value: Floor_3x_3x (31)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155626055863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529022449618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624231666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155626055863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220445221389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -27467,11 +29109,49 @@ PrefabInstance:
       value: Floor_3x_3x (17)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155648467606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529045126643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1383116921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155648467606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220421498924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -28942,11 +30622,49 @@ PrefabInstance:
       value: Floor_3x_3x (73)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155572766595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529103624422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2044795927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155572766595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220329053497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -29286,11 +31004,49 @@ PrefabInstance:
       value: Floor_3x_3x (108)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155579769177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529119034940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872911059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155579769177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220348640227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -29687,11 +31443,49 @@ PrefabInstance:
       value: Floor_3x_3x (83)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155588593484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529127577641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1552204670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155588593484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220338589174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -29797,11 +31591,49 @@ PrefabInstance:
       value: Floor_3x_3x (34)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155464939096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529129769277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1476101289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155464939096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220571409634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -30289,11 +32121,49 @@ PrefabInstance:
       value: Floor_3x_3x (114)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155470809751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529144272370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &497624375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155470809751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220558409773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -30773,11 +32643,49 @@ PrefabInstance:
       value: Floor_3x_3x (54)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155495556754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529168775671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2021598141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155495556754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220532861992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -31569,11 +33477,49 @@ PrefabInstance:
       value: Floor_3x_3x (69)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155516558216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529181369581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1256117438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155516558216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220553818418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -31975,11 +33921,49 @@ PrefabInstance:
       value: Floor_3x_3x (102)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155522391611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529187463518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &792423516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155522391611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220547069057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -32360,11 +34344,49 @@ PrefabInstance:
       value: Floor_3x_3x (28)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155401715755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529209139022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &127188254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155401715755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220493548177 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -32903,11 +34925,49 @@ PrefabInstance:
       value: Floor_3x_3x (77)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155422010395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529221317502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &582764914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155422010395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220513805985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -33231,11 +35291,49 @@ PrefabInstance:
       value: Floor_3x_3x (93)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155432966275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529231996902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &805765664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155432966275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220470227513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -33845,11 +35943,49 @@ PrefabInstance:
       value: Floor_3x_3x (38)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155437708745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529245407916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1170789572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155437708745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220456099699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -35259,11 +37395,49 @@ PrefabInstance:
       value: Floor_3x_3x (40)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155367124886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529300386035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &244643990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155367124886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220670731564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -36177,11 +38351,49 @@ PrefabInstance:
       value: Floor_3x_3x (41)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155259049083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529334905630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1269199875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155259049083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220636085953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -37109,11 +39321,49 @@ PrefabInstance:
       value: Floor_3x_3x (90)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155292792811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529368926350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2057629138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155292792811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220600622417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -37510,11 +39760,49 @@ PrefabInstance:
       value: Floor_3x_3x (88)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155308663022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529384537995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1073710707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155308663022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220618566228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -37620,11 +39908,49 @@ PrefabInstance:
       value: Floor_3x_3x (104)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274155309750123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529385621518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1824241465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274155309750123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383220617547217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -39590,11 +41916,49 @@ PrefabInstance:
       value: Floor_3x_3x (43)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157392823254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529455692979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134731908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157392823254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221891160428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -40484,11 +42848,49 @@ PrefabInstance:
       value: Floor_3x_3x (36)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157288589561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529485412252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &575802818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157288589561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221860323907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -40972,11 +43374,49 @@ PrefabInstance:
       value: Floor_3x_3x (96)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157303367703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529492064114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1613973564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157303367703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221854130861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -41160,11 +43600,49 @@ PrefabInstance:
       value: Floor_3x_3x (58)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157312687836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529501102521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1657957329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157312687836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221811012710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -42694,11 +45172,49 @@ PrefabInstance:
       value: Floor_3x_3x (110)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157223141737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529554169356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &174881434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157223141737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222061186003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -43026,11 +45542,49 @@ PrefabInstance:
       value: Floor_3x_3x (55)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157242715233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529565364996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1003789065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157242715233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222015776475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -43136,11 +45690,49 @@ PrefabInstance:
       value: Floor_3x_3x (79)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157245438634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529568351695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &402875881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157245438634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222012198928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -43738,11 +46330,49 @@ PrefabInstance:
       value: Floor_3x_3x (51)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157140787284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529606049585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1264074899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157140787284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221974637294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -44838,11 +47468,49 @@ PrefabInstance:
       value: Floor_3x_3x (74)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157189870037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529655377584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &456027520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157189870037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221958732655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -45018,11 +47686,49 @@ PrefabInstance:
       value: Floor_3x_3x (44)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157203080688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529660213909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1563213885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157203080688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221955141450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -45486,11 +48192,49 @@ PrefabInstance:
       value: Floor_3x_3x (22)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157074079606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529673814035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1005166301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157074079606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222176351692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -46804,11 +49548,49 @@ PrefabInstance:
       value: Floor_3x_3x (25)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157126843708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529717912153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &372718366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157126843708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222164105094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -47284,11 +50066,49 @@ PrefabInstance:
       value: Floor_3x_3x (115)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157009939128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529735226845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &618714518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157009939128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222114349058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -48022,11 +50842,49 @@ PrefabInstance:
       value: Floor_3x_3x (101)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157031686454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529765383763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1436560255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157031686454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222117227404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -49203,11 +52061,49 @@ PrefabInstance:
       value: Floor_3x_3x (75)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274157059764781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529785056584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &586529466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274157059764781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222097029271 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -50103,11 +52999,49 @@ PrefabInstance:
       value: Floor_3x_3x (99)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156955048078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529823221739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1247015331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156955048078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222327886388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -50665,11 +53599,49 @@ PrefabInstance:
       value: Floor_3x_3x (52)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156993404257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529852924420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1532412744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156993404257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222299101147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -50775,11 +53747,49 @@ PrefabInstance:
       value: Floor_3x_3x (89)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156989251913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529857166892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &201350115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156989251913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222294993907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -51477,11 +54487,49 @@ PrefabInstance:
       value: Floor_3x_3x (105)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156892367375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529886352746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652909212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156892367375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383222265213109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -52810,11 +55858,49 @@ PrefabInstance:
       value: Floor_3x_3x (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156809117811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529937063702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &236272615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156809117811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221374532297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -53376,11 +56462,49 @@ PrefabInstance:
       value: Floor_3x_3x (60)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156824389067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529952332462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &365066813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156824389067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221393997681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -54748,11 +57872,49 @@ PrefabInstance:
       value: Floor_3x_3x (27)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156852421630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529988754587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &689756801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156852421630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221357050180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -54858,11 +58020,49 @@ PrefabInstance:
       value: Floor_3x_3x (48)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156853569189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631529990162880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1242959625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156853569189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221356100639 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -55263,11 +58463,49 @@ PrefabInstance:
       value: Floor_3x_3x (72)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156741852001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530004009988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250921022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156741852001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221309350363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -56268,11 +59506,49 @@ PrefabInstance:
       value: Floor_3x_3x (61)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156753931778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530024755559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1405878005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156753931778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221321438392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -58191,11 +61467,49 @@ PrefabInstance:
       value: Floor_3x_3x (64)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156702410216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530107177613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1615118694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156702410216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221473378130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -59784,11 +63098,49 @@ PrefabInstance:
       value: Floor_3x_3x (106)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156631213410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530161826311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1374293669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156631213410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221452480472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -60028,11 +63380,49 @@ PrefabInstance:
       value: Floor_3x_3x (65)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156640003731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530170862070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1552135522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156640003731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221410937897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -60282,11 +63672,49 @@ PrefabInstance:
       value: Floor_3x_3x (113)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156635924594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530174908183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &529998746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156635924594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221406888648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -61706,11 +65134,49 @@ PrefabInstance:
       value: Floor_3x_3x (81)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156552394340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530225875201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667932538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156552394340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221656800478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -61886,11 +65352,49 @@ PrefabInstance:
       value: Floor_3x_3x (103)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156565245220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530230317633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &742370553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156565245220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221652879262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -62292,11 +65796,49 @@ PrefabInstance:
       value: Floor_3x_3x (94)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156588555809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530253644100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1168072389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156588555809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221630010523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -65386,11 +68928,49 @@ PrefabInstance:
       value: Floor_3x_3x (112)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156409100963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530350753222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1772950406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156409100963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221767258137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -65853,11 +69433,49 @@ PrefabInstance:
       value: Floor_3x_3x (67)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156431056065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530364580772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &846757548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156431056065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221787117179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -66695,11 +70313,49 @@ PrefabInstance:
       value: Floor_3x_3x (59)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156336120853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530403867504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1192267535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156336120853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221713165999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -66953,11 +70609,49 @@ PrefabInstance:
       value: Floor_3x_3x (80)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156344313013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530420186064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1321875963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156344313013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221698289167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -67663,11 +71357,49 @@ PrefabInstance:
       value: Floor_3x_3x (95)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156375430366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530451565499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1198671715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156375430366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221666451044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
@@ -67962,11 +71694,49 @@ PrefabInstance:
       value: Floor_3x_3x (57)
       objectReference: {fileID: 0}
     - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+--- !u!1 &7492274156382842889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232712272188944229, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}
+  m_PrefabInstance: {fileID: 6720631530458963820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &883998184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492274156382842889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &7832383221692738227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600150499941316063, guid: 127353b51f9e8f743a9da5e787b4656e, type: 3}

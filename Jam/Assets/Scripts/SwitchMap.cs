@@ -6,7 +6,9 @@ public class SwitchMap : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] DisableWall map_1, map_2;
+    [SerializeField] BakeRuntime first;
     DisableWall current;
+
 
     [SerializeField] Vector3[] positions = new Vector3[4];
     [SerializeField] Vector3[] rotations = new Vector3[4];
@@ -38,6 +40,7 @@ public class SwitchMap : MonoBehaviour
             current.DisableDoor();
             current.transform.position = positions[counter_loop % 4];
             current.transform.eulerAngles = rotations[counter_loop % 4];
+            first.BakeUpdate();
             counter_loop++;
         }
 
@@ -48,6 +51,7 @@ public class SwitchMap : MonoBehaviour
             current.DisableDoor();
             current.transform.position = positions[counter_loop % 4 ];
             current.transform.eulerAngles = rotations[counter_loop % 4];
+            first.BakeUpdate();
             counter_loop++;
         }
 
