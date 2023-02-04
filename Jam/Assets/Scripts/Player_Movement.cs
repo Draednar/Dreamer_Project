@@ -79,8 +79,8 @@ public class Player_Movement : MonoBehaviour
     void UseRotation()
     {
         rotation += new Vector3(-input.mouse_rotation.y * horizontal_mouse_speed, input.mouse_rotation.x * vertical_mouse_speed, 0f) * Time.deltaTime;
-
-        transform.eulerAngles = rotation;
+        main_camera.transform.eulerAngles = new Vector3(rotation.x, main_camera.transform.eulerAngles.y, main_camera.transform.eulerAngles.z);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotation.y, rotation.z);
     }
 
     void AnimCurveRotate()
