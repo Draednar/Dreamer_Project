@@ -12,7 +12,7 @@ public class Player_Movement : MonoBehaviour
 
     Transform[] doors_interacted = new Transform[2];
 
-    public delegate void OnSwitchMap();
+    public delegate void OnSwitchMap(bool value);
     public static event OnSwitchMap change;
 
     public delegate void OnResetDoor();
@@ -46,13 +46,13 @@ public class Player_Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Switch" && trigger_1 != other.transform || trigger_1 == null)
+        if (other.tag == "Switch" && trigger_1 != other.transform)
         {
             trigger_1 = other.transform;
-            change.Invoke();
+            change.Invoke(true);
         }
 
-        else if (other.tag == "Reset" && trigger_2 != other.transform || trigger_2 == null)
+        else if (other.tag == "Reset" && trigger_2 != other.transform)
         {
             trigger_2 = other.transform;
             reset.Invoke();

@@ -13,6 +13,8 @@ public class SwitchMap : MonoBehaviour
 
     int counter_loop = 0;
 
+    bool start_Change = true;
+
     private void Start()
     {
         current = map_1;
@@ -25,9 +27,11 @@ public class SwitchMap : MonoBehaviour
         Player_Movement.change -= ChangeMap;
     }
 
-    void ChangeMap()
+    void ChangeMap(bool value)
     {
-        if (current == map_1)
+        start_Change = value;
+
+        if (current == map_1 && start_Change)
         {
             current.ActivateDoor();
             current = map_2;
@@ -37,7 +41,7 @@ public class SwitchMap : MonoBehaviour
             counter_loop++;
         }
 
-        else if (current == map_2)
+        else if (current == map_2 && start_Change)
         {
             current.ActivateDoor();
             current = map_1;
