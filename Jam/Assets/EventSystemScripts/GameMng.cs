@@ -63,32 +63,31 @@ public class GameMng : MonoBehaviour
                         Debug.Log("Master Choose");
                         EventMng.current.MasterRoom_Events.Invoke();
                     }
-                    toursBeforeNextEvent = 1;
+                    toursBeforeNextEvent = Random.Range(1, 3);
                     break;
 
 
-                //case 2:
-                //    EventMng.current.OfficeRoom.Invoke();
-
-                //    Debug.Log("Third event happened, now fourth");
-
-                //    toursBeforeNextEvent = Random.Range(1, 4);
-                //    break;
-
                 case 3:
-                    //Lo zio inizia a camminare sul pianerottolo (ATTESA INVIO ANIMAZIONE ZIO)
-                    EventMng.current.WalkingUncle.Invoke();
-                    Debug.Log("Walking Uncle");
-                    EventMng.current.DancingLights.Invoke();
-                    Debug.Log("Dancing Lights");
-
+                    //Uncle
                     Debug.Log("Fourth event happened, now fifth");
+                    EventMng.current.PostChoose_Events.Invoke();
 
                     toursBeforeNextEvent = 1;
                     break;
                 case 4:
-                    EventMng.current.SisterDeath.Invoke();
-                    Debug.Log("Sister Death happened, now fifth");
+                    //Uncle
+                    Debug.Log("Uncle Follow, now fifth");
+                    EventMng.current.Office_UncleFollow_Event.Invoke();
+
+                    toursBeforeNextEvent = 1;
+                    break;
+                case 5:           
+                    Debug.Log("SisterDeath, now fifth");
+                    //EventMng.current.DeSpawn_Uncle.Invoke();
+
+                    EventMng.current.SisterDeath_Event.Invoke();
+
+                    toursBeforeNextEvent = 1;
                     break;
             }
 

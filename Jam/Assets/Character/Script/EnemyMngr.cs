@@ -278,6 +278,17 @@ public class EnemyMngr : MonoBehaviour
         }
     }
 
+    public void RotateMother()
+    {
+        for (int i = 0; i < character.Length; i++)
+        {
+            if (character[i].name == "Mother")
+            {
+                character[i].transform.Rotate(new Vector3(0f, 90f, 0f), Space.World);
+            }
+        }
+    }
+
     #endregion
 
 
