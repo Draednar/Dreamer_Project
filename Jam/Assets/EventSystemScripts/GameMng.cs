@@ -7,6 +7,7 @@ public class GameMng : MonoBehaviour
 {
     private GameMng gameMng;
     public static int toursBeforeNextEvent;
+    public static int loopCount;
     private static int storyStepIndex;
 
 
@@ -15,31 +16,29 @@ public class GameMng : MonoBehaviour
     void Start()
     {
         gameMng = this;
-        toursBeforeNextEvent = Random.Range(2,5);
+        toursBeforeNextEvent = Random.Range(2, 5);
+        toursBeforeNextEvent = 1;
     }
 
-    public void StartWaiting(int seconds)
-    {
-        Wait(seconds);
-    }
 
-    public IEnumerator Wait(int seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-    }
 
 
     public void tourTaken()
     {
         toursBeforeNextEvent--;
+        loopCount++;
+        Debug.Log(loopCount);
         if (toursBeforeNextEvent == 0)
         {
             switch (storyStepIndex)
             {
                 case 0:
                     //Spawn madre entrante nella camera della sorella
-                    EventMng.current.FirstEvent.Invoke(); 
                     Debug.Log("First event happened, now second");
+                    Debug.Log(loopCount);
+                    EventMng.current.FirstEvent.Invoke();
+
+
                     toursBeforeNextEvent = 1;
                     break;
 
@@ -58,12 +57,13 @@ public class GameMng : MonoBehaviour
                         Debug.Log("Sister Choose");
                         EventMng.current.SisterRoom_Events.Invoke();
                     }
-                    else if(choose == "Master")
+                    else if (choose == "Master")
                     {
                         Debug.Log("Master Choose");
                         EventMng.current.MasterRoom_Events.Invoke();
                     }
                     toursBeforeNextEvent = Random.Range(1, 3);
+
                     break;
 
 
@@ -75,13 +75,6 @@ public class GameMng : MonoBehaviour
                     toursBeforeNextEvent = 1;
                     break;
                 case 4:
-                    //Uncle
-                    Debug.Log("Uncle Follow, now fifth");
-                    EventMng.current.Office_UncleFollow_Event.Invoke();
-
-                    toursBeforeNextEvent = 1;
-                    break;
-                case 5:           
                     Debug.Log("SisterDeath, now fifth");
                     //EventMng.current.DeSpawn_Uncle.Invoke();
 
@@ -89,10 +82,26 @@ public class GameMng : MonoBehaviour
 
                     toursBeforeNextEvent = 1;
                     break;
+                case 5:
+                    EventMng.current.OfficeOpenRandom.Invoke();
+                    toursBeforeNextEvent = 1;
+
+                    break;
+                case 6:
+                    EventMng.current.BedRoomOpenRandom.Invoke();
+                    toursBeforeNextEvent = 1;
+
+                    break;
+                case 7:
+                    EventMng.current.UncleDeath.Invoke();
+                    toursBeforeNextEvent = 1;
+
+                    break;
+
             }
 
             storyStepIndex++;
         }
-            
+
     }
 }

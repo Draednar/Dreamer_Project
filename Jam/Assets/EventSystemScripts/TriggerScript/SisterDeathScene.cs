@@ -6,11 +6,18 @@ public class SisterDeathScene : MonoBehaviour
 {
     [SerializeField] public Transform positionMother;
     [SerializeField] public Transform positionSister;
+    [SerializeField] GameObject GameMngr;
+
+    [SerializeField] public GameObject copy;
     private void OnTriggerEnter(Collider other)
     {
         SpawnSister();
         SpawnMother();
+        GameMngr.GetComponent<LightBlink>().AllOff();
         EventMng.current.SisterDeathSceneActive_Event.Invoke();
+
+        gameObject.SetActive(false);
+        copy.SetActive(false);
     }
 
 

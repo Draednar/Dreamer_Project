@@ -14,6 +14,7 @@ public class EventMng : MonoBehaviour
         current = this;
     }
 
+    #region FirstHouse
     public UnityEvent endLoop;
 
     public UnityEvent FirstEvent;
@@ -30,15 +31,24 @@ public class EventMng : MonoBehaviour
 
     public UnityEvent PostChoose_Events;
 
-    public UnityEvent Office_UncleFollow_Event;
-    public UnityEvent EnterOffice_UncleFollow_Event;
+    public UnityEvent ActiveOffice_Events;
+    public UnityEvent EnterOffice_Events;
     public UnityEvent ExitOffice_UncleFollow_Event;
 
     public UnityEvent SisterDeath_Event;
     public UnityEvent SisterDeathSceneActive_Event;
+    public UnityEvent SisterDeathSceneDisable_Event;
+
+    public UnityEvent OfficeOpenRandom;
+    public UnityEvent BedRoomOpenRandom;
+    public UnityEvent UncleDeath;
+
+    #endregion
+
 
     public UnityEvent Spawn_Mother;
     public UnityEvent Follow_Mother_Event;
+    public UnityEvent MoveTo_Mother_Event;
     public UnityEvent DeSpawn_Mother;
     public UnityEvent Idle_Mother;
 
@@ -51,5 +61,11 @@ public class EventMng : MonoBehaviour
     public UnityEvent MoveTo_Uncle_Event;
     public UnityEvent DeSpawn_Uncle;
 
+    public UnityEvent EnterOffice_UncleFollow_Event;
+
     public UnityEvent Spawn_Sister;
+
+    public UnityEvent DisableAll;
+
+    public UnityEvent CloseDoor;
 }
