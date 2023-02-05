@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Modello01_Pbr
-    second: {fileID: 2100000, guid: 24b6ed15c4088f741bc7c331128ebf5d, type: 2}
+    second: {fileID: 2100000, guid: 31be1b2344f418b478644188fbe747ee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

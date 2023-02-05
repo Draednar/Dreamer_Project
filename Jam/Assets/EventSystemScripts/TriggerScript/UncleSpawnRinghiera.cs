@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class UncleSpawnRinghiera : MonoBehaviour
 {
-    [SerializeField] public Transform position;
-    [SerializeField] public Transform target;
+
+    [SerializeField] public GameObject uncle;
+    [SerializeField] public GameObject copy;
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Uncle Spawn");
-        PositionMngr.SetSpawnPosition(position);
-        EventMng.current.Spawn_Uncle.Invoke();
 
+        uncle.SetActive(true);
+        uncle.GetComponent<Animator>().SetBool("Ringhiera", true);
 
-        PositionMngr.SetSpawnPosition(target);
-        EventMng.current.MoveTo_Uncle_Event.Invoke();
-
+        gameObject.SetActive(false);
+        copy.SetActive(false);
     }
 }

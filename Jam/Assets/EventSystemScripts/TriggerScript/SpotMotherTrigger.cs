@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class SpotMotherTrigger : MonoBehaviour
 {
-    [SerializeField] public Transform position; 
-    [SerializeField] public Transform destination;
+    [SerializeField] private GameObject obj;
+    [SerializeField] public GameObject copy;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Spawn Mother");
-        PositionMngr.SetSpawnPosition(position);
-        PositionMngr.SetRotation(new Vector3(0f, -90f, 0f));
-        EventMng.current.Spawn_Mother.Invoke();
-        //EventMng.current.SpothMotherTriggerOnEventSpawn.Invoke("Mother", position);
-        PositionMngr.SetTargetPosition(destination);
+        obj.SetActive(true);
+        obj.GetComponent<Animator>().SetBool("OpenDoor", true);
         EventMng.current.MotherInSisterRoomEvent.Invoke();
+
+        gameObject.SetActive(false);
+        copy.SetActive(false);
     }
 }
