@@ -15,6 +15,7 @@ public class SoundMgr : MonoBehaviour
 
     void Start()
     {
+
         for (int i = 0; i < value.Count; i++)
         {
             sounds.Add(key[i], value[i]);

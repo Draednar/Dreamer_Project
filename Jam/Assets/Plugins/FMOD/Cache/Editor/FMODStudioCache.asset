@@ -51,6 +51,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &-7340038368760955551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/MotherAppear
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/MotherAppear
+  Guid:
+    Data1: 537591128
+    Data2: 1110793230
+    Data3: 764898202
+    Data4: -547912512
+  Banks:
+  - {fileID: -2960334862458139465}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 78000
 --- !u!114 &-6833660883161283395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,30 +116,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/StartVoices/Stop
-  m_EditorClassIdentifier: 
-  Name: Stop
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2830352682
-    data2: 300624591
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-6111778865124569998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Radio/Stop
   m_EditorClassIdentifier: 
   Name: Stop
   StudioPath: 
@@ -175,6 +178,30 @@ MonoBehaviour:
     data2: 1126472063
   Type: 0
   IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3768419212589640350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LoopPlay/Stop
+  m_EditorClassIdentifier: 
+  Name: Stop
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2830352682
+    data2: 300624591
+  Type: 0
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &-3612080170078391428
@@ -247,10 +274,10 @@ MonoBehaviour:
   Path: ../../../../FMOD/JamFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638111578560000000
+  lastModified: 638111596940000000
   FileSizes:
   - Name: Desktop
-    Value: 4550368
+    Value: 11174208
   Exists: 1
 --- !u!114 &-2679982932459492430
 MonoBehaviour:
@@ -365,14 +392,45 @@ MonoBehaviour:
   - {fileID: -3339851465774074881}
   - {fileID: 4983099617173223088}
   - {fileID: 3825556359864665540}
+  - {fileID: 4737073084469780390}
+  - {fileID: -7340038368760955551}
+  - {fileID: 319743878298149953}
   EditorParameters:
   - {fileID: -4309598030521322385}
   MasterBanks:
   - {fileID: -2960334862458139465}
   StringsBanks:
   - {fileID: 1414840524098778200}
-  cacheTime: 638111578560000000
+  cacheTime: 638111596940000000
   cacheVersion: 131601
+--- !u!114 &319743878298149953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background/LoopPlay
+  m_EditorClassIdentifier: 
+  Path: event:/Background/LoopPlay
+  Guid:
+    Data1: 402526679
+    Data2: 1244115164
+    Data3: -1266011746
+    Data4: -1196647800
+  Banks:
+  - {fileID: -2960334862458139465}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3768419212589640350}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 144000
 --- !u!114 &1175135340853017780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,10 +470,10 @@ MonoBehaviour:
   Path: ../../../../FMOD/JamFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638111578560000000
+  lastModified: 638111596940000000
   FileSizes:
   - Name: Desktop
-    Value: 1578
+    Value: 1722
   Exists: 1
 --- !u!114 &2021848203506850207
 MonoBehaviour:
@@ -525,6 +583,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3882
+--- !u!114 &4737073084469780390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/MotherFollows
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/MotherFollows
+  Guid:
+    Data1: 358215238
+    Data2: 1241492382
+    Data3: -1370982985
+    Data4: 1882737932
+  Banks:
+  - {fileID: -2960334862458139465}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108000
 --- !u!114 &4983099617173223088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,9 +632,8 @@ MonoBehaviour:
   - {fileID: -2960334862458139465}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -6111778865124569998}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 33342

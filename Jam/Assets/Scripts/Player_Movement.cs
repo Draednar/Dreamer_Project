@@ -30,6 +30,9 @@ public class Player_Movement : MonoBehaviour
         input = GetComponent<Player_Input>();
         rb = GetComponent<Rigidbody>();
         rotation = transform.eulerAngles;
+
+        SoundMgr.AddOwner(transform, "LoopPlay");
+        SoundMgr.StartLoopSound(transform);
     }
 
     private void Update()
