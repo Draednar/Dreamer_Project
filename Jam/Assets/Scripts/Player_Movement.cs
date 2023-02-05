@@ -70,7 +70,7 @@ public class Player_Movement : MonoBehaviour
 
     private void PlayStep()
     {
-        if (Math.Abs(curve.Evaluate(time_animation)) >= 0.99)
+        if (Math.Abs(curve.Evaluate(time_animation)) >= 0.99f)
         {
             SoundMgr.PlaySound("Step");
         }

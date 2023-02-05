@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,9 +9,9 @@ public class SoundMgr : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] List<string> key = new List<string>();
     [SerializeField] List<EventReference> value = new List<EventReference>();
-    [SerializeField] string GlobalVariable;
 
     static Dictionary<string, EventReference> sounds = new Dictionary<string, EventReference>();
+    static Dictionary<Transform, EventInstance> parameters = new Dictionary<Transform, EventInstance>();
 
     void Start()
     {
@@ -25,9 +26,24 @@ public class SoundMgr : MonoBehaviour
         RuntimeManager.PlayOneShot(sounds[name]);
     }
 
-    public static void SetGlobalParameter(float value)
+    public static void StartLoopSound(Transform owner)
     {
-        RuntimeManager.StudioSystem.setParameterByName("EndLoop", value);
+        parameters[owner].start();
+    }
+
+    public static void AddOwner(Transform owner, string name)
+    {
+        parameters.Add(owner, RuntimeManager.CreateInstance(sounds[name]));
+    }
+
+    public static void SetParametersContinue(Transform owner)
+    {
+        parameters[owner].setParameterByName("Stop", 0f);
+    }
+
+    public static void SetParametersStop(Transform owner)
+    {
+        parameters[owner].setParameterByName("Stop", 1f);
     }
 
 }
