@@ -5,10 +5,12 @@ using UnityEngine.InputSystem;
 
 public class Player_Input : MonoBehaviour
 {
-    public Vector2 movement_direction { get; protected set; }
-    public Vector2 mouse_rotation { get; protected set; }
+    public Vector2 movement_direction { get; set; }
+    public Vector2 mouse_rotation { get; set; }
 
     public bool button_interact { get; protected set; }
+
+    public bool pause { get; set; }
 
     public void MouseInput(InputAction.CallbackContext context)
     {
@@ -22,7 +24,7 @@ public class Player_Input : MonoBehaviour
 
     public void InteractInput(InputAction.CallbackContext context) 
     {
-        if (context.performed)
+        if (context.canceled)
         {
             button_interact = true;
         }
@@ -32,5 +34,19 @@ public class Player_Input : MonoBehaviour
             button_interact = false;
         }
     }
+
+    public void PauseMenr(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            pause = true;
+        }
+
+        else
+        {
+            pause = false;
+        }
+    }
+
 }
 
