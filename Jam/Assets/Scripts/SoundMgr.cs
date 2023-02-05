@@ -13,9 +13,8 @@ public class SoundMgr : MonoBehaviour
     static Dictionary<string, EventReference> sounds = new Dictionary<string, EventReference>();
     static Dictionary<Transform, EventInstance> parameters = new Dictionary<Transform, EventInstance>();
 
-    void Start()
+    private void Awake()
     {
-
         for (int i = 0; i < value.Count; i++)
         {
             sounds.Add(key[i], value[i]);
