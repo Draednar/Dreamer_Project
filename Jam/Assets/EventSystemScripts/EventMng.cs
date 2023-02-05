@@ -61,6 +61,8 @@ public class EventMng : MonoBehaviour
     public UnityEvent MoveTo_Uncle_Event;
     public UnityEvent DeSpawn_Uncle;
 
+    public UnityEvent EnterOffice_UncleFollow_Event;
+
     public UnityEvent Spawn_Sister;
 
     public UnityEvent DisableAll;
